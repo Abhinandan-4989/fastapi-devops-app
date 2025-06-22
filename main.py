@@ -6,3 +6,6 @@ app = FastAPI()
 def read_root():
     return{"message": "Hello from FastAPI DevOps App!"}
 
+@app.get("/health")
+def health_check():
+    return{"status":"healthy"}
